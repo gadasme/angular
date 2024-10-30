@@ -16,8 +16,8 @@ export class AuthService {
   private _authStatus = signal<AuthStatus>(AuthStatus.checking);
 
   //! Al mundo exterior
-  public currentUser = computed(() => this._currentUser);
-  public authStatus = computed(() => this._authStatus);
+  public currentUser = computed(() => { return this._currentUser() });
+  public authStatus = computed(() => { return this._authStatus() });
 
   constructor() { }
 
