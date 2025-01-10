@@ -45,6 +45,9 @@ const _todoReducer = createReducer(
       }
     });
   }),
+  on(actions.limpiarCompletados, (state) => {
+    return state.filter( todo => !todo.completado );
+  }),
 );
 
 export function todoReducer(state: any, action: any) {
