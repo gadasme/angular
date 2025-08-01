@@ -31,7 +31,6 @@ export class AuthService {
       if (fuser) {
         this.userSubscription = this.firestore.doc(`${fuser.uid}/usuario`).valueChanges()
           .subscribe((firestoreUser: any) => {
-            console.log({ firestoreUser });
             const user = Usuario.fromFirebase(firestoreUser);
             this._user = user;
             this.store.dispatch(authActions.setUser({ user }));

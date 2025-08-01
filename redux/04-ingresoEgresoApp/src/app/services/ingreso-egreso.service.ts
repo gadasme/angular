@@ -19,4 +19,11 @@ export class IngresoEgresoService {
       .collection('items')
       .add({ ...ingresoEgreso });
   }
+
+  initIngresoEgresoListener(uid: string) {
+    return this.firestore.collection(`${uid}/ingresos-egresos/items`).valueChanges()
+      .subscribe(algo => {
+        console.log({algo})
+      })
+  }
 }
