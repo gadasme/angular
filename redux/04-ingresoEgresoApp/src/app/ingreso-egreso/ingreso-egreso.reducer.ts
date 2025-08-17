@@ -7,7 +7,7 @@ export interface State {
 }
 
 export const initialState: State = {
-   items: []
+    items: []
 }
 
 const _ingresoEgresoReducer = createReducer(initialState,

@@ -3,6 +3,6 @@ export class IngresoEgreso {
     public descripcion: string,
     public monto: number,
     public tipo: string, // 'ingreso' or 'egreso'
-    // public uid?: string // optional, for unique identification
+    public uid?: string // optional, for unique identification
   ) {}
 }
